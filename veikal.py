@@ -52,16 +52,23 @@ class SystemUser:
         self.email=email
     
     def set_user_info(self,newusername,newpassword,newemail):
+        print("________________________________________________________")
+        print("Vecais info:")
+        print("Lietotājvārds: ",self.username)
+        print("Lietotāja parole: ",self.password)
+        print("Lietotāja e-pasts: ",self.email)
         self.username=newusername
-        self.passworfd=newpassword
+        self.password=newpassword
         self.email=newemail
+        
     def get_user_info(self):
-        print("Info:")
+        print("________________________________________________________")
+        print("Jaunais info:")
         print("Lietotājvārds: ",self.username)
         print("Lietotāja parole: ",self.password)
         print("Lietotāja e-pasts: ",self.email)
 
-Raimonds=SystemUser("Generalis333","Password 123","raimondsss@gmail.com")
-Raimonds.set_user_info()
+Raimonds=SystemUser("Generalis333","Password123","raimondsss@gmail.com")
+Raimonds.set_user_info("GeneralBmw","BemWe39m5","raimondsfreaky@hotmail.com")
 Raimonds.get_user_info()
 
