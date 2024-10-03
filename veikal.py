@@ -14,10 +14,11 @@ obj2=product("Turbīna",100,4)
 obj1.get_total_price()
 obj2.get_total_price()
 
+
 class ShoppingCart(product):
     def __init__(self,name,price,quantity):
         super().__init__(name,price,quantity)
-
+    
     def add_product_to_cart(self):
         print(self.quantity," Produkts/ti ",self.name,"",self.price,"$ pievienots grozam!")
 
@@ -26,7 +27,11 @@ class ShoppingCart(product):
 
     def total_total_price(self):
         totaltotal=self.price*self.quantity
-        print("Ķopējās izmaksas",totaltotal)
+        print("Kopējās izmaksas",totaltotal)
+
+    def get_total_pricee(self):
+        total=sum(product.get_total_price() for product in self.products)
+        print("Kopējā groza summa: ",total)
 
 
 
@@ -34,14 +39,18 @@ obj1=ShoppingCart("Eļļa",10,4)
 IepirkumuGrozs1=obj1
 IepirkumuGrozs1.add_product_to_cart()
 IepirkumuGrozs1.remove_product_from_cart()
-IepirkumuGrozs1.total_total_price()
-
+#IepirkumuGrozs1.total_total_price()
+#ShoppingCart.total_total_price(obj1)
 
 obj2=ShoppingCart("Turbīna",100,4)
 IepirkumuGrozs2=obj2
 IepirkumuGrozs2.add_product_to_cart()
 IepirkumuGrozs2.remove_product_from_cart()
-IepirkumuGrozs2.total_total_price()
+#IepirkumuGrozs2.total_total_price()
+#ShoppingCart.total_total_price(obj2)
+
+total1=obj1.price*obj1.quantity+obj2.price*obj2.quantity
+print("Groza kopējā summa: ",total1)
 
 
 
